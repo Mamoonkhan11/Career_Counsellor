@@ -1,0 +1,127 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - career_help_request
+  - inform_interest
+  - inform_skills
+  - inform_strengths
+  - inform_preferences
+  - explore_more
+  - confirm_career
+  - deny_career
+  - ask_requirements
+  - ask_salary
+  - ask_progression
+  - ask_learning_resources
+  - export_plan
+
+entities:
+  - interest
+  - skill
+  - strength
+  - preference
+  - career
+  - domain
+
+slots:
+  interests:
+    type: list
+    mappings:
+    - type: from_entity
+      entity: interest
+      intent: inform_interest
+  skills:
+    type: list
+    mappings:
+    - type: from_entity
+      entity: skill
+      intent: inform_skills
+  strengths:
+    type: list
+    mappings:
+    - type: from_entity
+      entity: strength
+      intent: inform_strengths
+  preferences:
+    type: list
+    mappings:
+    - type: from_entity
+      entity: preference
+      intent: inform_preferences
+  current_career_recommendations:
+    type: list
+    mappings:
+    - type: custom
+  conversation_context:
+    type: text
+    mappings:
+    - type: custom
+  user_name:
+    type: text
+    mappings:
+    - type: custom
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm your AI Career Counsellor. I'm here to help you discover fulfilling career paths based on your interests, skills, and strengths. What's on your mind today?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Goodbye! Remember, your career journey is uniquely yours. Feel free to come back anytime for guidance."
+
+  utter_iamabot:
+  - text: "I am a career counselling AI, created to help you navigate your professional journey with personalized recommendations and insights."
+
+  utter_acknowledge_interest:
+  - text: "That's interesting! {interest} is a fascinating area with many career opportunities."
+  - text: "Great! Technology is an exciting field with incredible growth potential and innovation opportunities."
+
+  utter_ask_more_details:
+  - text: "I'd love to learn more about what draws you to {interest}. Could you tell me about your skills or strengths in this area?"
+
+  utter_career_recommendations:
+  - text: "Based on what you've shared, here are some career paths that might align well with your interests and strengths:\n\n{recommendations}"
+
+  utter_ask_clarification:
+  - text: "I'd like to make sure I understand you correctly. When you mentioned {topic}, did you mean {interpretation}? Or could you tell me more about what you have in mind?"
+
+  utter_explore_more:
+  - text: "Would you like to explore more about any of these careers? I can tell you about required skills, salary ranges, career progression, or learning resources."
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_acknowledge_interest
+  - utter_ask_more_details
+  - utter_career_recommendations
+  - utter_ask_clarification
+  - utter_explore_more
+  - action_recommend_careers
+  - action_extract_entities
+  - action_provide_career_details
+  - action_generate_learning_plan
+  - action_export_career_plan
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

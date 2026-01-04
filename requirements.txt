@@ -1,0 +1,25 @@
+# Core dependencies
+rasa
+streamlit
+requests
+
+# NLP libraries
+nltk
+spacy
+transformers
+
+# Data processing
+pandas
+numpy
+
+# Additional utilities
+python-dateutil
+pytz
+
+# Optional: For PDF generation (bonus feature)
+reportlab
+
+# Development dependencies
+pytest
+black
+flake8

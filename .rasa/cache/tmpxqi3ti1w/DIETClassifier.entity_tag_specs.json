@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-interest",
+      "2": "I-interest",
+      "3": "L-interest",
+      "4": "U-interest",
+      "5": "B-preference",
+      "6": "I-preference",
+      "7": "L-preference",
+      "8": "U-preference",
+      "9": "B-skill",
+      "10": "I-skill",
+      "11": "L-skill",
+      "12": "U-skill",
+      "13": "B-strength",
+      "14": "I-strength",
+      "15": "L-strength",
+      "16": "U-strength",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-interest": 1,
+      "I-interest": 2,
+      "L-interest": 3,
+      "U-interest": 4,
+      "B-preference": 5,
+      "I-preference": 6,
+      "L-preference": 7,
+      "U-preference": 8,
+      "B-skill": 9,
+      "I-skill": 10,
+      "L-skill": 11,
+      "U-skill": 12,
+      "B-strength": 13,
+      "I-strength": 14,
+      "L-strength": 15,
+      "U-strength": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

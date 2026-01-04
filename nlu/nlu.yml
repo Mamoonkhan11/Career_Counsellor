@@ -1,0 +1,295 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - moin
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye bye
+    - gotta go
+    - see you
+    - see you soon
+    - bye-bye
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - definitely
+    - absolutely
+    - yes please
+    - sure
+    - yep
+    - yeah
+    - ok
+    - okay
+    - alright
+    - I agree
+    - that's right
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - nah
+    - not at all
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what are you?
+    - who are you?
+    - are you real?
+
+- intent: career_help_request
+  examples: |
+    - I need career advice
+    - help me with my career
+    - I want to change careers
+    - what career should I choose
+    - career counselling
+    - help me find a job
+    - I need guidance on my career path
+    - what should I do for a living
+    - career recommendations
+    - suggest careers for me
+    - what careers match my interests
+    - help me choose a career
+    - I'm lost in my career
+    - career guidance please
+    - I need career suggestions
+
+- intent: inform_interest
+  examples: |
+    - I like [programming]{"entity": "interest"}
+    - I'm interested in [data science]{"entity": "interest"}
+    - I enjoy [designing]{"entity": "interest"}
+    - my interests are [technology]{"entity": "interest"} and [art]{"entity": "interest"}
+    - I love [writing]{"entity": "interest"}
+    - I'm passionate about [AI]{"entity": "interest"}
+    - I have interest in [business]{"entity": "interest"}
+    - [coding]{"entity": "interest"} is my thing
+    - I'm into [UX design]{"entity": "interest"}
+    - I like [helping people]{"entity": "interest"}
+    - my hobbies include [photography]{"entity": "interest"}
+    - I'm fascinated by [machine learning]{"entity": "interest"}
+    - I enjoy [teaching]{"entity": "interest"}
+    - [finance]{"entity": "interest"} interests me
+    - I'm drawn to [research]{"entity": "interest"}
+    - I like [IT]{"entity": "interest"}
+    - [CS]{"entity": "interest"} is my field
+    - I'm interested in [tech]{"entity": "interest"}
+    - [creative work]{"entity": "interest"} appeals to me
+    - [software development]{"entity": "interest"} is my passion
+    - I'm into [computer science]{"entity": "interest"}
+    - [cybersecurity]{"entity": "interest"} interests me
+    - I love working with [computers]{"entity": "interest"}
+    - [web development]{"entity": "interest"} is what I enjoy
+    - I'm interested in [artificial intelligence]{"entity": "interest"}
+    - [mobile app development]{"entity": "interest"} appeals to me
+    - I like [database]{"entity": "interest"} work
+
+- intent: inform_skills
+  examples: |
+    - I know [Python]{"entity": "skill"}
+    - I'm good at [communication]{"entity": "skill"}
+    - my skills include [project management]{"entity": "skill"}
+    - I have experience in [web development]{"entity": "skill"}
+    - I'm skilled in [data analysis]{"entity": "skill"}
+    - I can [design graphics]{"entity": "skill"}
+    - my technical skills are [JavaScript]{"entity": "skill"}
+    - I'm proficient in [SQL]{"entity": "skill"}
+    - I have [leadership]{"entity": "skill"} skills
+    - I'm good with [problem solving]{"entity": "skill"}
+    - my skills: [marketing]{"entity": "skill"} and [sales]{"entity": "skill"}
+    - I excel at [writing]{"entity": "skill"}
+    - I'm experienced in [customer service]{"entity": "skill"}
+
+- intent: inform_strengths
+  examples: |
+    - my strength is [creativity]{"entity": "strength"}
+    - I'm strong in [analytical thinking]{"entity": "strength"}
+    - I excel at [teamwork]{"entity": "strength"}
+    - my strengths include [attention to detail]{"entity": "strength"}
+    - I'm good at [time management]{"entity": "strength"}
+    - I have strong [communication]{"entity": "strength"} skills
+    - my strength is [problem solving]{"entity": "strength"}
+    - I'm resilient and [adaptable]{"entity": "strength"}
+    - I have [leadership]{"entity": "strength"} qualities
+    - I'm [organized]{"entity": "strength"}
+    - my strengths are [logical thinking]{"entity": "strength"} and [creativity]{"entity": "strength"}
+
+- intent: inform_preferences
+  examples: |
+    - I prefer [remote work]{"entity": "preference"}
+    - I want [work-life balance]{"entity": "preference"}
+    - my preference is [flexible hours]{"entity": "preference"}
+    - I like [team environments]{"entity": "preference"}
+    - I prefer [independent work]{"entity": "preference"}
+    - I want [high salary]{"entity": "preference"}
+    - my preference is [creative freedom]{"entity": "preference"}
+    - I like [helping others]{"entity": "preference"}
+    - I prefer [structured environments]{"entity": "preference"}
+    - my preference is [travel opportunities]{"entity": "preference"}
+
+- intent: explore_more
+  examples: |
+    - tell me more about this career
+    - I want to know more
+    - can you elaborate
+    - give me details
+    - explain this further
+    - I'd like more information
+    - what else can you tell me
+    - expand on this
+    - more details please
+    - tell me about requirements
+    - what skills do I need
+    - what's the salary like
+    - career progression
+    - learning resources
+    - how to get started
+
+- intent: confirm_career
+  examples: |
+    - that sounds good
+    - I like this career
+    - this interests me
+    - tell me more about this one
+    - I want to pursue this
+    - this matches me
+    - yes, this is what I want
+    - I'm interested in this career
+    - this seems right for me
+
+- intent: deny_career
+  examples: |
+    - not interested in this
+    - this doesn't appeal to me
+    - I don't like this career
+    - not my thing
+    - pass on this one
+    - next option please
+    - something else
+    - not for me
+
+- intent: ask_requirements
+  examples: |
+    - what do I need for this career
+    - what skills are required
+    - what's needed to become this
+    - requirements for this job
+    - what qualifications do I need
+    - education requirements
+    - what should I study
+    - prerequisites
+
+- intent: ask_salary
+  examples: |
+    - what's the salary
+    - how much does this pay
+    - salary range
+    - earning potential
+    - compensation
+    - pay scale
+    - income
+
+- intent: ask_progression
+  examples: |
+    - career progression
+    - growth opportunities
+    - advancement
+    - career ladder
+    - promotion path
+    - how to advance
+    - future prospects
+
+- intent: ask_learning_resources
+  examples: |
+    - where can I learn this
+    - learning resources
+    - courses to take
+    - training programs
+    - how to get started
+    - study materials
+    - certifications
+
+- intent: export_plan
+  examples: |
+    - export my career plan
+    - save this plan
+    - download career plan
+    - generate PDF
+    - create report
+    - export to PDF
+    - save plan

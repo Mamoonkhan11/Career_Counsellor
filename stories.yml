@@ -1,0 +1,109 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: career help request
+  steps:
+  - intent: career_help_request
+  - action: utter_acknowledge_interest
+  - action: utter_ask_more_details
+
+- story: inform interests and get recommendations
+  steps:
+  - intent: inform_interest
+  - action: action_extract_entities
+  - action: utter_acknowledge_interest
+  - action: action_recommend_careers
+  - action: utter_career_recommendations
+  - action: utter_explore_more
+
+- story: inform skills and get recommendations
+  steps:
+  - intent: inform_skills
+  - action: action_extract_entities
+  - action: utter_acknowledge_interest
+  - action: action_recommend_careers
+  - action: utter_career_recommendations
+  - action: utter_explore_more
+
+- story: inform strengths and get recommendations
+  steps:
+  - intent: inform_strengths
+  - action: action_extract_entities
+  - action: utter_acknowledge_interest
+  - action: action_recommend_careers
+  - action: utter_career_recommendations
+  - action: utter_explore_more
+
+- story: explore more about career
+  steps:
+  - intent: explore_more
+  - action: action_provide_career_details
+
+- story: confirm career choice
+  steps:
+  - intent: confirm_career
+  - action: action_generate_learning_plan
+
+- story: deny career and get alternatives
+  steps:
+  - intent: deny_career
+  - action: action_recommend_careers
+  - action: utter_career_recommendations
+
+- story: ask for requirements
+  steps:
+  - intent: ask_requirements
+  - action: action_provide_career_details
+
+- story: ask for salary
+  steps:
+  - intent: ask_salary
+  - action: action_provide_career_details
+
+- story: ask for progression
+  steps:
+  - intent: ask_progression
+  - action: action_provide_career_details
+
+- story: ask for learning resources
+  steps:
+  - intent: ask_learning_resources
+  - action: action_generate_learning_plan
+
+- story: export career plan
+  steps:
+  - intent: export_plan
+  - action: action_export_career_plan
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

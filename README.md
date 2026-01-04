@@ -56,8 +56,8 @@ AI Career Counsellor/
 
 1. Clone the repository
    ```bash
-   git clone <repository-url>
-   cd ai-career-counsellor
+   git clone https://github.com/Mamoonkhan11/Career_Counsellor
+   cd Career_Counsellor
    ```
 
 2. Create virtual environment
@@ -69,7 +69,7 @@ AI Career Counsellor/
 
 3. Install dependencies
    ```bash
-   pip install -r requirements.txt
+   pip install -r ./requirements.txt
    ```
 
 4. Download spaCy model
